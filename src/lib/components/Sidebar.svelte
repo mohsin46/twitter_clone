@@ -7,7 +7,7 @@ import ChevronDown from "$lib/icons/ChevronDown.svelte";
     var searchActive: boolean = false;
 </script>
 
-<div class="w-3/12 pl-8 pr-20 pb-4" >
+<div class="w-3/12 pl-8 pr-20 pb-4 pt-4" >
     <div class="w-full h-12 bg-color-gray-darker rounded-full" class:searchbar-active={searchActive} >
         <div class="text-center pt-3 flex px-4" >
             <Search active={searchActive} />
@@ -15,48 +15,48 @@ import ChevronDown from "$lib/icons/ChevronDown.svelte";
         </div>
     </div>
 
-    <div class="w-full bg-color-gray-base rounded-2xl mt-4 p-4" >
-        <div class="mt-1 flex justify-between" >
+    <div class="w-full bg-color-gray-base rounded-2xl mt-4" >
+        <div class="mt-1 flex justify-between p-4" >
             <p class="font-black text-lg" >Paris Trend</p>
             <GearSettings />
         </div>
         <div class="divide-y" >
-            <div class="mt-4 pt-4" >
+            <div class="trending-div" >
                 <div class="flex justify-between" >
                     <p class="trending-text" >1. Trending</p>
-                    <ChevronDown />  
+                    <ChevronDown width={12} color="#828282" />  
                 </div>
                 <p class="hashtag-text" >#JessieMueller</p>
                 <p class="tweets-text">456K Tweets</p>
             </div>
-            <div class="mt-4 pt-4" >
+            <div class="trending-div" >
                 <div class="flex justify-between" >
                     <p class="trending-text" >2. Trending</p>
-                    <ChevronDown />  
+                    <ChevronDown width={12} color="#828282" />  
                 </div>
                 <p class="hashtag-text" >#ThelmaJones</p>
                 <p class="tweets-text">350K Tweets</p>
             </div>
-            <div class="mt-4 pt-4" >
+            <div class="trending-div" >
                 <div class="flex justify-between" >
                     <p class="trending-text" >3. Trending</p>
-                    <ChevronDown />  
+                    <ChevronDown width={12} color="#828282" />  
                 </div>
                 <p class="hashtag-text" >#LoisPearson</p>
                 <p class="tweets-text">290K Tweets</p>
             </div>
-            <div class="mt-4 pt-4" >
+            <div class="trending-div" >
                 <div class="flex justify-between" >
                     <p class="trending-text" >4. Trending</p>
-                    <ChevronDown />  
+                    <ChevronDown width={12} color="#828282" />  
                 </div>
                 <p class="hashtag-text" >#WilmaBoyd</p>
                 <p class="tweets-text">334K Tweets</p>
             </div>
-            <div class="mt-4 pt-4" >
+            <div class="trending-div" >
                 <div class="flex justify-between" >
                     <p class="trending-text" >5. Trending</p>
-                    <ChevronDown />  
+                    <ChevronDown width={12} color="#828282" />  
                 </div>
                 <p class="hashtag-text" >#ErikBaker</p>
                 <p class="tweets-text">185K Tweets</p>
@@ -127,6 +127,10 @@ import ChevronDown from "$lib/icons/ChevronDown.svelte";
 	.search-active::placeholder{
 		color: rgba(0,0,0,0.7);
 	}
+
+    .trending-div{
+        @apply py-4 px-8 hover:bg-color-gray-light
+    }
 
     .trending-text{
         @apply text-sm text-gray-500;

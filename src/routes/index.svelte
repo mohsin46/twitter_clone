@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Main from '$pages/Main/index.svelte';
+	import Main from '$lib/pages/Main/Index.svelte';
 </script>
 
 <Main />

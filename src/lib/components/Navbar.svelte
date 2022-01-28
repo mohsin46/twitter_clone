@@ -12,7 +12,7 @@ import ProfilePic from "$lib/icons/ProfilePic.svelte";
     export let page: String;
 </script>
 
-<aside class="w-3/12 px-24 h-screen fixed" >
+<aside class="w-3/12 px-24 h-screen fixed pt-4" >
     <div class="p-2 w-12 rounded-full hover:bg-color-blue-light" >
         <TwitterLogo />
     </div>
@@ -48,7 +48,7 @@ import ProfilePic from "$lib/icons/ProfilePic.svelte";
     </a>
 
     <a href="/" class="nav-ele" >
-        <ProfilePic />
+        <ProfilePic size={32} />
         <p class="{page=='more' && 'nav-active'} nav-text" >Profile</p>
     </a>
 
