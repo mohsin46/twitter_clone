@@ -5,7 +5,7 @@
     }
     const handleIconMouseOut = (e) => {
         fill = "#828282"
-}
+    }
 </script>
 
 <div class="icon-hover" on:mouseover={handleMouseOver} on:mouseout={handleIconMouseOut} >

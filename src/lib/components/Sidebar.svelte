@@ -7,16 +7,16 @@ import ChevronDown from "$lib/icons/ChevronDown.svelte";
     var searchActive: boolean = false;
 </script>
 
-<div class="w-3/12 pl-8 pr-20 pb-4 pt-4" >
+<div class="w-4/12 xl:w-3/12 pl-8 pr-8 xl:pr-20 pb-4 pt-4 hidden lg:block" >
     <div class="w-full h-12 bg-color-gray-darker rounded-full" class:searchbar-active={searchActive} >
         <div class="text-center pt-3 flex px-4" >
             <Search active={searchActive} />
-            <input on:focusout={()=>{searchActive=false}} on:focus={()=>{searchActive=true}} class="ml-2 bg-color-gray-darker focus:outline-none" class:search-active={searchActive} id="searchbar" type="text" placeholder="Search Twitter" >
+            <input on:focusout={()=>{searchActive=false}} on:focus={()=>{searchActive=true}} class="ml-2 w-full bg-color-gray-darker focus:outline-none" class:search-active={searchActive} id="searchbar" type="text" placeholder="Search Twitter" >
         </div>
     </div>
 
     <div class="w-full bg-color-gray-base rounded-2xl mt-4" >
-        <div class="mt-1 flex justify-between p-4" >
+        <div class="mt-1 flex justify-between px-4 pt-4 pb-1" >
             <p class="font-black text-lg" >Paris Trend</p>
             <GearSettings />
         </div>
@@ -61,16 +61,18 @@ import ChevronDown from "$lib/icons/ChevronDown.svelte";
                 <p class="hashtag-text" >#ErikBaker</p>
                 <p class="tweets-text">185K Tweets</p>
             </div>
-            <div class="text-color-blue-dark font-semibold text-center mt-2 pt-2" >
-                Show more
+            <div class="text-center py-4" >
+                <button class="text-color-blue-dark font-semibold">
+                    Show more
+                </button>
             </div>
         </div>
     </div>
 
-    <div class="w-full bg-color-gray-base rounded-2xl mt-4 p-4 mb-6">
-        <p class="font-black text-lg" >Who to follow</p>
-        <div class="mt-4 divide-y" >
-            <div class="flex mt-2 pt-4" >
+    <div class="w-full bg-color-gray-base rounded-2xl mt-4">
+        <p class="font-black text-lg pt-4 px-4" >Who to follow</p>
+        <div class="mt-2 divide-y" >
+            <div class="follow-div" >
                 <ProfilePic1 />
                 <div class="px-2" >
                     <div class="flex">
@@ -83,7 +85,7 @@ import ChevronDown from "$lib/icons/ChevronDown.svelte";
                     Follow
                 </button>
             </div>
-            <div class="flex mt-2 pt-4" >
+            <div class="follow-div" >
                 <ProfilePic1 />
                 <div class="px-2" >
                     <div class="flex">
@@ -96,7 +98,7 @@ import ChevronDown from "$lib/icons/ChevronDown.svelte";
                     Follow
                 </button>
             </div> 
-            <div class="flex mt-2 pt-4" >
+            <div class="follow-div" >
                 <ProfilePic1 />
                 <div class="px-2" >
                     <div class="flex">
@@ -149,8 +151,16 @@ import ChevronDown from "$lib/icons/ChevronDown.svelte";
     }
 
     .follow-btn{
-        @apply ml-auto font-bold text-color-blue-dark border-color-blue-dark rounded-full px-4 h-8 ;
+        @apply ml-auto font-bold text-color-blue-dark border-color-blue-dark rounded-full px-4 h-8;
         border-width: 1px;
+    }
+
+    .follow-btn:hover{
+        @apply bg-color-blue-dark text-white
+    }
+
+    .follow-div{
+        @apply flex px-4 py-4 hover:bg-color-gray-light;
     }
 
 </style>

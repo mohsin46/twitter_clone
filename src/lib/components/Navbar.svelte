@@ -1,18 +1,18 @@
 <script lang="ts" >
 	import TwitterLogo from "$icons/TwitterLogo.svelte";
 	import Home from "$icons/Home.svelte"
-import Hashtag from "$lib/icons/Hashtag.svelte";
-import Notification from "$lib/icons/Notification.svelte";
-import Message from "$lib/icons/Message.svelte";
-import Bookmark from "$lib/icons/Bookmark.svelte";
-import List from "$lib/icons/List.svelte";
-import More from "$lib/icons/More.svelte";
-import ProfilePic from "$lib/icons/ProfilePic.svelte";
+    import Hashtag from "$lib/icons/Hashtag.svelte";
+    import Notification from "$lib/icons/Notification.svelte";
+    import Message from "$lib/icons/Message.svelte";
+    import Bookmark from "$lib/icons/Bookmark.svelte";
+    import List from "$lib/icons/List.svelte";
+    import More from "$lib/icons/More.svelte";
+    import ProfilePic from "$lib/icons/ProfilePic.svelte";
 
     export let page: String;
 </script>
 
-<aside class="w-3/12 px-24 h-screen fixed pt-4" >
+<div class="w-24 lg:w-44 ml-6 lg:ml-16 xl:ml-28 h-screen fixed pt-4" >
     <div class="p-2 w-12 rounded-full hover:bg-color-blue-light" >
         <TwitterLogo />
     </div>
@@ -57,10 +57,10 @@ import ProfilePic from "$lib/icons/ProfilePic.svelte";
         <p class="{page=='more' && 'nav-active'} nav-text" >More</p>
     </a>
 
-    <button class="mt-6 bg-color-blue-dark w-48 h-12 rounded-full py-3 shadow-lg hover:bg-color-blue-darker" >
+    <button class="mt-6 bg-color-blue-dark w-48 h-12 rounded-full py-3 shadow-lg hover:bg-color-blue-darker hidden xl:block" >
         <p class="text-center font-bold text-sm text-white" >Tweet</p>
     </button>
-</aside>
+</div>
 
 <style>
     .nav-ele{
@@ -68,7 +68,7 @@ import ProfilePic from "$lib/icons/ProfilePic.svelte";
 	}
 
 	.nav-text{
-		@apply ml-4 font-bold text-base;
+		@apply ml-4 font-bold text-base hidden xl:block;
 	}
 
 	.nav-active{
