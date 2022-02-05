@@ -12,7 +12,7 @@
     export let page: String;
 </script>
 
-<div class="w-24 lg:w-44 ml-6 lg:ml-16 xl:ml-28 h-screen fixed pt-4" >
+<div class="w-24 lg:w-44 ml-6 lg:ml-16 xl:ml-32 h-screen fixed pt-4" >
     <div class="p-2 w-12 rounded-full hover:bg-color-blue-light" >
         <TwitterLogo />
     </div>
