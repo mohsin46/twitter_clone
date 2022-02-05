@@ -7,7 +7,7 @@ import ChevronDown from "$lib/icons/ChevronDown.svelte";
     var searchActive: boolean = false;
 </script>
 
-<div class="w-4/12 xl:w-3/12 pl-8 pr-8 xl:pr-20 pb-4 pt-4 hidden lg:block" >
+<div class="w-4/12 xl:w-4/12 pl-8 pr-8 xl:pr-32 pb-4 pt-4 hidden lg:block" >
     <div class="w-full h-12 bg-color-gray-darker rounded-full" class:searchbar-active={searchActive} >
         <div class="text-center pt-3 flex px-4" >
             <Search active={searchActive} />
