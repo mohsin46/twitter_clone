@@ -1,19 +1,15 @@
 <script lang="ts" >
-    import Certified from "$lib/icons/Certified.svelte";
+import Certified from "$lib/icons/Certified.svelte";
 import ChevronDown from "$lib/icons/ChevronDown.svelte";
-    import GearSettings from "$lib/icons/GearSettings.svelte";
-    import ProfilePic1 from "$lib/icons/ProfilePic1.svelte";
-    import Search from "$lib/icons/Search.svelte";
-    var searchActive: boolean = false;
+import GearSettings from "$lib/icons/GearSettings.svelte";
+import ProfilePic1 from "$lib/icons/ProfilePic1.svelte";
+import SearchBox from "./SearchBox.svelte";
+    
 </script>
 
 <div class="w-4/12 xl:w-4/12 pl-8 pr-8 xl:pr-32 pb-4 pt-4 hidden lg:block" >
-    <div class="w-full h-12 bg-color-gray-darker rounded-full" class:searchbar-active={searchActive} >
-        <div class="text-center pt-3 flex px-4" >
-            <Search active={searchActive} />
-            <input on:focusout={()=>{searchActive=false}} on:focus={()=>{searchActive=true}} class="ml-2 w-full bg-color-gray-darker focus:outline-none" class:search-active={searchActive} id="searchbar" type="text" placeholder="Search Twitter" >
-        </div>
-    </div>
+
+    <SearchBox />
 
     <div class="w-full bg-color-gray-base rounded-2xl mt-4" >
         <div class="mt-1 flex justify-between px-4 pt-4 pb-1" >
@@ -117,19 +113,6 @@ import ChevronDown from "$lib/icons/ChevronDown.svelte";
 </div>
 
 <style>
-    .searchbar-active{
-        @apply bg-white border-color-blue-dark;
-        border-width: 1px;
-	}
-
-	.search-active{
-		@apply bg-white text-black
-	}
-
-	.search-active::placeholder{
-		color: rgba(0,0,0,0.7);
-	}
-
     .trending-div{
         @apply py-4 px-8 hover:bg-color-gray-light
     }

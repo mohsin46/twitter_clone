@@ -1,4 +1,5 @@
 <script lang="ts" >
+    import { page } from '$app/stores';
 	import TwitterLogo from "$icons/TwitterLogo.svelte";
 	import Home from "$icons/Home.svelte"
     import Hashtag from "$lib/icons/Hashtag.svelte";
@@ -9,7 +10,14 @@
     import More from "$lib/icons/More.svelte";
     import ProfilePic from "$lib/icons/ProfilePic.svelte";
 
-    export let page: String;
+    let pathName = $page.url.pathname;
+	function initPathName() {
+		pathName = pathName.split('/').pop();
+	}
+	initPathName();
+  
+    
+
 </script>
 
 <div class="w-24 lg:w-44 ml-6 lg:ml-16 xl:ml-32 h-screen fixed pt-4" >
@@ -18,43 +26,43 @@
     </div>
 
     <a href="/" class="nav-ele mt-12">
-        <Home active={page=='home'} />
-        <p class="{page=='home' && 'nav-active'} nav-text" >Home</p>
+        <Home active={pathName==''} />
+        <p class="{pathName=='' && 'nav-active'} nav-text" >Home</p>
+    </a>
+
+    <a href="/explore" class="nav-ele" >
+        <Hashtag active={pathName=='explore'} />
+        <p class="{pathName=='explore' && 'nav-active'} nav-text" >Explore</p>
     </a>
 
     <a href="/" class="nav-ele" >
-        <Hashtag active={page=='explore'} />
-        <p class="{page=='explore' && 'nav-active'} nav-text" >Explore</p>
+        <Notification active={pathName=='notifications'} />
+        <p class="{pathName=='notifications' && 'nav-active'} nav-text" >Notifications</p>
     </a>
 
     <a href="/" class="nav-ele" >
-        <Notification active={page=='notifications'} />
-        <p class="{page=='notifications' && 'nav-active'} nav-text" >Notifications</p>
+        <Message active={pathName=='messages'} />
+        <p class="{pathName=='messages' && 'nav-active'} nav-text" >Messages</p>
     </a>
 
     <a href="/" class="nav-ele" >
-        <Message active={page=='messages'} />
-        <p class="{page=='messages' && 'nav-active'} nav-text" >Messages</p>
+        <Bookmark active={pathName=='bookmarks'} />
+        <p class="{pathName=='bookmarks' && 'nav-active'} nav-text" >Bookmarks</p>
     </a>
 
     <a href="/" class="nav-ele" >
-        <Bookmark active={page=='bookmarks'} />
-        <p class="{page=='bookmarks' && 'nav-active'} nav-text" >Bookmarks</p>
-    </a>
-
-    <a href="/" class="nav-ele" >
-        <List active={page=='lists'} />
-        <p class="{page=='lists' && 'nav-active'} nav-text" >Lists</p>
+        <List active={pathName=='lists'} />
+        <p class="{pathName=='lists' && 'nav-active'} nav-text" >Lists</p>
     </a>
 
     <a href="/" class="nav-ele" >
         <ProfilePic size={32} />
-        <p class="{page=='more' && 'nav-active'} nav-text" >Profile</p>
+        <p class="{pathName=='more' && 'nav-active'} nav-text" >Profile</p>
     </a>
 
     <a href="/" class="nav-ele" >
-        <More active={page=='more'} />
-        <p class="{page=='more' && 'nav-active'} nav-text" >More</p>
+        <More active={pathName=='more'} />
+        <p class="{pathName=='more' && 'nav-active'} nav-text" >More</p>
     </a>
 
     <button class="mt-6 bg-color-blue-dark w-48 h-12 rounded-full py-3 shadow-lg hover:bg-color-blue-darker hidden xl:block" >

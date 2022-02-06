@@ -9,3 +9,14 @@ export interface TweetType {
     tweet: string,
     images: Array<string>
 }
+
+export interface ExploreTags {
+    topic: string,
+    hashtag: string,
+    tweets: number
+}
+
+export interface NavOptions{
+    name: String,
+    link: String
+}
