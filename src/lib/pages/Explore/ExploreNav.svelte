@@ -23,8 +23,8 @@ const navOptions: Array<NavOptions> = [
         link: "sports"
     },
     {
-        name: "Events", 
-        link: "events"
+        name: "Entertainment", 
+        link: "entertainment"
     },
 ]
 

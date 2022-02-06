@@ -10,13 +10,19 @@ export interface TweetType {
     images: Array<string>
 }
 
-export interface ExploreTags {
+export interface ExploreTagsType {
     topic: string,
     hashtag: string,
     tweets: number
 }
 
-export interface NavOptions{
+export interface ExploreNewsType {
+    topic: string,
+    title: string,
+    image: string
+}
+
+export interface NavOptionsType{
     name: String,
     link: String
 }

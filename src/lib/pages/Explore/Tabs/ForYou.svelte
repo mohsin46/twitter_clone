@@ -1,8 +1,8 @@
 <script lang="ts" >
-import type { ExploreTags } from "src/global";
-import TweetItem from "./TweetItem.svelte";
+import type { ExploreTagsType } from "src/global";
+import TweetItem from "../TweetItem.svelte";
 
-const items: Array<ExploreTags> = [
+const items: Array<ExploreTagsType> = [
     {
         topic: "Politics",
         hashtag: "BarackObama",

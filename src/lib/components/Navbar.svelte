@@ -30,7 +30,7 @@
         <p class="{pathName=='' && 'nav-active'} nav-text" >Home</p>
     </a>
 
-    <a href="/explore" class="nav-ele" >
+    <a href="/explore/tabs/for-you" class="nav-ele" >
         <Hashtag active={pathName=='explore'} />
         <p class="{pathName=='explore' && 'nav-active'} nav-text" >Explore</p>
     </a>
