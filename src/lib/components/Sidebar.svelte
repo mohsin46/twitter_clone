@@ -7,7 +7,7 @@ import SearchBox from "./SearchBox.svelte";
     
 </script>
 
-<div class="w-4/12 xl:w-4/12 pl-8 pr-8 xl:pr-32 pb-4 pt-4 hidden lg:block" >
+<div class="w-4/12 xl:w-4/12 pl-8 pr-8 xl:pr-32 pb-4 pt-4 hidden lg:block overflow-auto" >
 
     <SearchBox />
 
@@ -113,6 +113,11 @@ import SearchBox from "./SearchBox.svelte";
 </div>
 
 <style>
+
+    ::-webkit-scrollbar{
+        width: 0;
+    }
+
     .trending-div{
         @apply py-4 px-8 hover:bg-color-gray-light
     }

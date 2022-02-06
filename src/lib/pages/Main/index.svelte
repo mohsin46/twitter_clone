@@ -41,26 +41,29 @@ const tweets: Array<TweetType> = [
 
 </script>
 
+
 <div class="flex justify-between mt-8 border-b-2 pb-4 px-8" >
 	<p class="font-black text-xl" >Home</p>
 	<Customize />
 </div>
 
-<CreateTweet />
 
-<div class="w-full" >
-	{#each tweets as tweet}
-		<Tweet 
-			profileImage={tweet.profileImage} name={tweet.name} username={tweet.username}
-			isCertified={tweet.isCertified} time={tweet.time} tweet={tweet.tweet}
-			images = {tweet.images}	
-		/>				
-	{/each}
-</div>
+    <CreateTweet />
+
+    <div class="w-full" >
+        {#each tweets as tweet}
+            <Tweet 
+                profileImage={tweet.profileImage} name={tweet.name} username={tweet.username}
+                isCertified={tweet.isCertified} time={tweet.time} tweet={tweet.tweet}
+                images = {tweet.images}	
+            />				
+        {/each}
+    </div>
 
 
 <style lang="postcss">
 	* {
 		font-family: 'Roboto', sans-serif;
 	}
+
 </style>
